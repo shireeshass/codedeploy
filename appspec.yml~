@@ -5,14 +5,14 @@ files:
     destination: /home/ubuntu/
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
+    - location: apache_stop.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/start_server
+    - location: afterinstall.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: script/stop_server
+    - location: apache_start.sh
       timeout: 300
       runas: root
