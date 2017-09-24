@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ubuntu/code
-npm install
+sudo service apache2 start
